@@ -23,13 +23,14 @@
             <!-- add date and time (EST) to homepage-->
 
             <p id="currentDay" class="lead custom-dateTime"></p>
-            
+         <form id="form" onsubmit="return false;">   
             <!--this is the search bar-->
-            <input type="text" placeholder="Search by City or Zip Code" class="form-control mb-3 search-bar-custom-class" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input id="userInput-city" type="text" placeholder="Search by City or Zip Code" class="form-control mb-3 search-bar-custom-class" aria-describedby="emailHelp">
             <!--this is the search button-->
             <div class="d-grid gap-2 d-md-block">
                 <a href="weatherdashboard.html" id= 'search-btn' class="btn btn-primary btn-custom-class" type="button">Search</a>
             </div>
+        </form>
         </div>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
