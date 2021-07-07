@@ -14,9 +14,73 @@
 <main>
     <body>
         <h2 id="homepage-header">Welcome to the Weather Dashboard!</h2>
-        <h3>Search for a City</h3>
-        <h4>Search History</h4>
+        <p id="currentDay" class="lead custom-dateTime custom-bgk"></p>
+        
+        <!-- these will go in a grid column on the left hand side of the page-->
+        <div class="container">
+            <div class="row">
+              <div class="col-3 search-div">
+                <h3>Search for a City:</h3>
+                <input type="text" placeholder="Search by City or Zip Code" class="form-control mb-3" id="exampleInputEmail1" aria-describedby="emailHelp">
+            
+            <!-- this table will be populated from local storage by recent searches-->    
+            <table class="table table-dark table-striped">
+                
+                <h4><strong>Recent Search History</strong></h4>
+                <thead>
+                  </thead>
+                  <tbody>
+                    <tr >
+                      <th class="btn btn-primary custom-city-button" scope="row">Atlanta</th>
+                    </tr>
+                    <tr>
+                      <th class="btn btn-primary custom-city-button" scope="row">Boston</th>
+                    </tr>
+                    <tr>
+                      <th class="btn btn-primary custom-city-button" scope="row">Chicago</th>
+                    </tr>
+                    <tr>
+                        <th class="btn btn-primary custom-city-button" scope="row">Detroit</th>
+                      </tr>
+                  </tbody>
+              </table>
 
+                 <a href="homepage.html" id= 'back-btn' class="btn btn-primary btn-custom-class" type="button">Go Back</a>
+            
+            </div>
+                
+        <!-- the current weather display and cards will go in the grid column on the right hand side of the page-->
+        <div class="col weather-div">
+            WEATHER RESULTS WILL GO HERE
+            <h2 id="city-name">City Name Here</h2>
+        </div>
+
+        <div class="container">
+            <div class='row'>
+                <div class = "col-3"></div>
+                <div class="col-9 forecast-div">
+
+                    <h3 id="five-day-forecast-div">5-Day Forecast:</h3>
+
+
+                    <div class= "col-3 custom-cards-class">
+                        <div class="card text-black bg-light mb-3 col-sm-3" style="max-width: 18rem;">
+                            <div class="card-header">Day 1</div>
+                            <div class="card-body">
+                            <h5 class="card-title">Dark card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                     </div>
+                 </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+        
+        
+        
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
         <script src="script.js"></script>
