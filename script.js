@@ -20,17 +20,17 @@ var state ="";
 
 
 //save user input to local storage
-var userInput = document.getElementById(userCityInput);
+var userInput = document.getElementById('userInput-city');
 
 //store
 localStorage.setItem("city", userInput);
 
 //Load item and show in console
-console.log(localStorage.getItem('city'))
+console.log(localStorage.getItem('city'));
 
 //save user input into a variable
 function cityName() {
-  var userInputCity = document.getElementById('userInput-city')
+  var userInputCity = document.getElementById('userInput-city');
   console.log(userInputCity);
 };
 
