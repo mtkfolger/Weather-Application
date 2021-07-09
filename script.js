@@ -31,7 +31,7 @@ form.addEventListener('submit', function(event){
 
 // Fetch API Call using information from local storage
 
-fetch("https://api.openweathermap.org/data/2.5/forecast?q=cityName&appid=0dc6bffb22b00026825caac91f732003")
+fetch('https://api.openweathermap.org/data/2.5/forecast?q=Detroit&appid=b8f57c89af0b884250d1c025195c5ed7')
   .then(response =>{
     return response.json();
   })
