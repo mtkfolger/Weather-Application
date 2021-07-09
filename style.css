@@ -8,10 +8,9 @@
     justify-content: center;
     flex-direction: column;
     flex-wrap: nowrap;
-    width: 85%;
-    margin-left: 10em;
-    margin-right: 10em;
-    background:rgba(255, 255, 255, 0.795);
+    width: 100vw;
+    background: -webkit-linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
 }
 
 #homepage-header {
@@ -36,6 +35,9 @@
     font-size: medium;
     padding-top: 1em;
     padding-bottom: 1em;
+    background: -webkit-linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: whitesmoke;
 }
 
 .search-bar-custom-class {
@@ -45,21 +47,36 @@
     text-align: center;
     padding:0;
     margin-left: 24em;
-    width: 55%;
+    width: 50vw;
     
 }
 
 .btn-custom-class {
-    margin-left: 35em;
-    margin-right: 5em;
-    width: 35%;
+    width: 10vw;
+    margin-left: 40vw;
+    margin-right: 40vw;
     padding: 1;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    
 }
 
 #currentDay {
     display: flex;
     justify-content: center;
     font-weight: bolder;
+    background: -webkit-linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: whitesmoke;
+}
+
+#form {
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 #back-btn {
@@ -91,13 +108,16 @@
 }
 
 #city-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-weight: bolder;
 }
 
 #five-day-forecast-div {
-    
+    margin: 0;
     font-weight: bolder;
-    padding-top: 2em;
+    padding-top: 0em;
 
 }
 
@@ -106,12 +126,17 @@
 }
 
 .custom-city-button {
-    background-color: none;
+    background-color: blue;
+    background-image: none;
+    color: black;
+    border-color: none;
+    margin-bottom: .5em;
 }
 
 
 .custom-city-button.hover {
     background-color: none;
+    background-image: none;
     opacity: 100%;
 }
 

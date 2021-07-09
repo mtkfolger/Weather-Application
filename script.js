@@ -11,32 +11,30 @@ setInterval(displayTime, 1000);
 
 var buttonEl = $('#search-btn');
 
+
 //API Key for Weather API Call
 var APIKey = "0dc6bffb22b00026825caac91f732003";
 
-//User input variables
-var city = "";
-var state ="";
 
 
-//save user input to local storage
-var userInput = document.getElementById('userInput-city');
+var form = document.getElementById('form');
 
-//store
-localStorage.setItem("city", userInput);
+form.addEventListener('submit', function(event){
+  event.preventDefault() // Do this to prevent the form from autosubmitting
 
-//Load item and show in console
-console.log(localStorage.getItem('city'));
+  var cityName = document.getElementById('userInput-city').value;
+  
+  localStorage.setItem("City", cityName); 
 
-//save user input into a variable
-function cityName() {
-  var userInputCity = document.getElementById('userInput-city');
-  console.log(userInputCity);
-};
+  console.log(cityName);
+})
 
-cityName();
+// Fetch API Call using information from local storage
 
-var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIKey;
-
-//API Call
-//fetch (queryURL);
+fetch("https://api.openweathermap.org/data/2.5/forecast?q=cityName&appid=0dc6bffb22b00026825caac91f732003")
+  .then(response =>{
+    return response.json();
+  })
+.then(json=>{
+  console.log(json);
+})
